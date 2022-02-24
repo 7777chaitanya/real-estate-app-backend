@@ -26,7 +26,7 @@ Things you may want to cover:
 
 ## Run the rails server on a parituclar ip & port 
 ```ruby
-rails server -b 192.168.0.106 -p 5000
+rails server -b <your-ip> -p 5000
 ```
 
 
