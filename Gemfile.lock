@@ -181,6 +181,7 @@ GEM
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
+    simple_command (0.1.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -230,6 +231,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.2)
   selenium-webdriver
+  simple_command
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails

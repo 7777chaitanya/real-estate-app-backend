@@ -51,6 +51,11 @@ gem "bootsnap", require: false
 # To implement JWT authentication in our application
 gem "jwt"
 
+# simple_command is an easy way to create services 
+# It's role is similar to that of a role of a helper
+# It facilitates the connection between controller & helper
+gem "simple_command"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
