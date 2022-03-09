@@ -1,15 +1,13 @@
 class AuthenticationController < ApplicationController
-  def index
-  end
-
-  def validate
-    @username = params[:username]
-    @password = params[:password]
-    isPresent = User.find_or_create_by(username: "USERNAME")
-    if isPresent[:username] == @username 
-      render :json => {:available => true}
+  skip_before_action :authenticate_request
+ 
+  def authenticate
+    command = AuthenticateUser.call(params[:email], params[:password])
+ 
+    if command.success?
+      render json: { auth_token: command.result }
     else
-      render :json => {:available => false}
+      render json: { error: command.errors }, status: :unauthorized
     end
   end
-end
+ end

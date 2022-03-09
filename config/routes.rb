@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :users
 
-  get "/signin", to: "authentication#validate"
+  post 'authenticate', to: 'authentication#authenticate'
+
 end
